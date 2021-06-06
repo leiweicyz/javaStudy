@@ -37,9 +37,12 @@ public class ThreadStudy {
             threads1[t] = new Thread2(latch, "latch" + t);
             threads1[t].start();
         }
+        for(var t=0;t<3;t++){
+            threads1[t].join();
+        }
 
         synchronized (latch) {
-            latch.wait(2000);
+            latch.wait(1);
         }
         for(var thread : threads) {
             System.out.println(thread.getData());
