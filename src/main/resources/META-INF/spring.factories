@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=week05.StarterApplication
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=week05.StarterApplication

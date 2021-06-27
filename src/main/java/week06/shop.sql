@@ -1,13 +1,13 @@
 
 create table study_member(
-    id int auto_increment not null  primary key,
+    user_id int auto_increment not null  primary key,
     username varchar(20) not null,
     password varchar(100) not null,
     read_name varchar(20)
 );
 
 create table study_product(
-    id int auto_increment not null primary key,
+    p_id int auto_increment not null primary key,
     product_name nvarchar(100),
     price decimal(18,2),
     product_img nvarchar(100),
@@ -17,9 +17,9 @@ create table study_product(
 );
 
 create table study_order(
-    id int auto_increment not null primary key,
+    order_id int auto_increment not null primary key,
     order_number varchar(32),
-    member_id int,
+    user_id int,
     product_count int,
     total_price decimal(18,2),
     create_time datetime,
